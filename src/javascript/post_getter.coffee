@@ -29,8 +29,7 @@ module.exports = PostGetter =
     url = @apiURL(params)
     $.ajax
       url: url
-      dataType: "jsonp"
-      jsonp: 'jsonp'
+      dataType: "json"
       success: (response) =>
         type = $('input[name=roundup-type]:checked', '.radios').val()
         posts = response.data
